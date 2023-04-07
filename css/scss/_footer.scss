@@ -1,0 +1,161 @@
+footer {
+    background-color: $backgroundColor;
+}
+.footerArea {
+    padding: 0 52px;
+    @include responsive('<medium') {
+        padding: 16px 24px;
+    }
+}
+.footerTop {
+    display: flex;
+    justify-content: space-between;
+    padding-block: 72px;
+    align-items: center;
+    @include responsive('<medium') {
+        flex-direction: column;
+        align-items: flex-start;
+        padding-block: 48px;
+    }
+}
+.footerTopLeft {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    width: 310px;
+    .brandNameSub {
+        p {
+            font-size: 16px;
+            color: $subtitleGrey;
+            @include responsive('<medium') {
+                font-size: 14px;
+                line-height: 22px;
+            }
+        }
+    }
+    .mobileHidden {
+        @include responsive('<medium') {
+            display: none;
+        }
+    }
+}
+.brandIcons {
+    display: flex;
+    gap: 16px;
+    align-items: center;
+    .brandIcon {
+        border-radius: 100px;
+        border: 1px solid $white;
+        background: $white;
+        width: 36px;
+        height: 36px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
+.footerLists {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    @include responsive('<medium') {
+        grid-template-columns: repeat(1,1fr);
+        padding: 24px 0 0;
+        width: 100%;
+    }
+}
+.listArea {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    padding-right: 72px;
+    @include responsive('<medium') {
+        padding: 0;
+    }
+    .listHeader {
+        @include responsive('<medium') {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border-bottom: 1px solid $lightBorderGrey;
+        }
+        p {
+            font-size: 14px;
+            font-weight: 600;
+            line-height: 24px;
+            @include responsive('<medium') {
+                padding: 10px 0;
+            }
+        }
+        svg {
+            @include responsive('>medium') {
+                display: none;
+            }
+        }
+    }
+    .listContent {
+        ul {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            @include responsive('<medium') {
+                display: none;
+            }
+            li {
+                font-size: 14px;
+                font-weight: 400;
+                color: $darkGrey;
+            }
+        }
+    }
+}
+.footerBottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid $lightBorderGrey;
+    padding-block: 24px;
+    @include responsive('<medium') {
+        border: none;
+        flex-direction: column-reverse;
+        gap: 32px;
+    }
+}
+.footerBottomLeft {
+    p {
+        font-size: 14px;
+        font-weight: 400;
+        color: $darkGrey;
+        @include responsive('<medium') {
+            font-size: 12px;
+            line-height: 20px;
+        }
+    }
+}
+.mobileFooterBottom {
+    @include responsive('>medium') {
+        display: none;
+    }
+}
+.footerBottomRight {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+    @include responsive('<medium') {
+        gap: 24px;
+    }
+    .footerLanguage {
+        display: flex;
+        gap: 8px;
+        align-items: center;
+    }
+    .footerDropDown {
+        display: flex;
+        align-items: center;
+        p {
+            font-size: 14px;
+            @include responsive('<medium') {
+                line-height: 24px;
+            }
+        }
+    }
+}
